@@ -1,6 +1,10 @@
-FROM node:18-slim
+FROM node:18-bullseye  # NOT slim or alpine
 
-# Install Chromium deps for Puppeteer
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+
+# Install Puppeteer dependencies
 RUN apt-get update && apt-get install -y \
   libx11-xcb1 \
   libxcomposite1 \
@@ -21,12 +25,9 @@ RUN apt-get update && apt-get install -y \
   libxss1 \
   fonts-liberation \
   wget \
+  ca-certificates \
   && rm -rf /var/lib/apt/lists/*
 
-# Then copy your app
-WORKDIR /app
-COPY package*.json ./
-RUN npm install
 COPY . .
 
 CMD ["node", "server.js"]
