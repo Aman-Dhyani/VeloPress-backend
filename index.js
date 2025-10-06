@@ -6,7 +6,7 @@ import { removeDuplicateCss } from "./utils/removeDuplicateCss.js";
 import "dotenv"
 
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 3000;
 
 // Middleware to parse JSON request bodies
 app.use(express.json());
