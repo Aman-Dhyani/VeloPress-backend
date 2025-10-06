@@ -30,7 +30,7 @@ function createFileNameAndPermalink(pageName, postType) {
 }
 
 // Route for generating critical CSS
-app.post("/velopress/critical", async (req, res) => {
+app.post("/critical", async (req, res) => {
   let { urls } = req.body;
 
   // Ensure urls is an array of URLs
@@ -65,7 +65,7 @@ app.post("/velopress/critical", async (req, res) => {
 });
 
 // Route for reducing unused CSS
-app.post("/velopress/purge", async (req, res) => {
+app.post("/purge", async (req, res) => {
   const { pageName, postType, url, safelists } = req.body;
 
   try {
