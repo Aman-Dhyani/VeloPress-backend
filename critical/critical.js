@@ -6,12 +6,14 @@ export async function generateCriticalCss(urls) {
   try {
     const results = [];
     const browser = await puppeteer.launch({
-        headless: true,
-        args: [
-            '--no-sandbox',
-            '--disable-gpu',
-            '--disable-dev-shm-usage'
-        ]
+      headless: true,
+      executablePath: '/usr/bin/chromium-browser',
+      args: [
+        '--no-sandbox',
+        '--disable-gpu',
+        '--disable-dev-shm-usage',
+        '--disable-setuid-sandbox',
+      ]
     });
 
     // Loop through each URL in the urls array
