@@ -1,23 +1,14 @@
 // generateCriticalCss.js
 import { generate } from 'critical';
 import puppeteer from 'puppeteer';
-import fs from "fs";
-
-const possiblePaths = [
-  "/usr/bin/google-chrome-stable",
-  "/usr/bin/chromium-browser"
-];
 
 export async function generateCriticalCss(urls) {
   try {
     const results = [];
-    const browserPath = possiblePaths.find(p => fs.existsSync(p));
-    if (!browserPath) throw new Error("No Chromium/Chrome binary found");
-    
     const browser = await puppeteer.launch({
       headless: true,
-      executablePath: browserPath,
-      args: ["--no-sandbox", "--disable-gpu", "--disable-dev-shm-usage"]
+      executablePath: '/usr/bin/chromium-browser',
+      args: ["--no-sandbox", "--disable-gpu", "--disable-dev-shm-usage"],
     });
 
     // Loop through each URL in the urls array
