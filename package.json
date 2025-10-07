@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^7.0.2",
+    "@sparticuz/chromium": "^141.0.0",
     "axios": "^1.8.4",
     "cheerio": "^1.0.0",
     "cors": "^2.8.5",
