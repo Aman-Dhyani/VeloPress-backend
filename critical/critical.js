@@ -9,6 +9,7 @@ export async function generateCriticalCss(urls) {
       headless: true,
       executablePath: process.env.PUPPETEER_EXECUTABLE_PATH,
       args: ["--no-sandbox", "--disable-gpu", "--disable-dev-shm-usage"],
+      ignoreDefaultArgs: ['--disable-extensions']
     });
 
     // Loop through each URL in the urls array
