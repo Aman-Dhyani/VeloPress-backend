@@ -4,4 +4,4 @@ aptPkgs = [
 ]
 
 [env]
-PUPPETEER_EXECUTABLE_PATH = "/snap/bin/chromium"
+PUPPETEER_EXECUTABLE_PATH = "/usr/bin/google-chrome-stable"
