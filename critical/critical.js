@@ -7,7 +7,7 @@ export async function generateCriticalCss(urls) {
     const results = [];
 const browser = await puppeteer.launch({
   headless: true,
-  executablePath: '/usr/bin/google-chrome-stable', // should exist after install
+
   args: [
     '--no-sandbox',
     '--disable-gpu',
