@@ -1,6 +1,6 @@
 [phases.setup]
 aptPkgs = [
-  "chromium"   # installs Chromium and necessary dependencies automatically
+  "chromium"
 ]
 
 [env]
