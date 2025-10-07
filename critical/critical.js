@@ -1,5 +1,4 @@
 // generateCriticalCss.js
-import chromium from "@sparticuz/chromium";
 import { generate } from 'critical';
 import puppeteer from 'puppeteer';
 
