@@ -24,6 +24,7 @@
     "postcss-discard-duplicates": "^7.0.1",
     "postcss-safe-parser": "^7.0.1",
     "puppeteer": "^24.23.0",
+    "puppeteer-core": "^24.23.0",
     "purgecss": "^7.0.2"
   },
   "description": ""
