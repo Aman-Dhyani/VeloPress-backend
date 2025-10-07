@@ -7,7 +7,7 @@ export async function generateCriticalCss(urls) {
     const results = [];
     const browser = await puppeteer.launch({
       headless: true,
-      executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || "/usr/bin/google-chrome",
+      executablePath:"/usr/bin/google-chrome",
       args: ["--no-sandbox", "--disable-gpu", "--disable-dev-shm-usage"],
     });
 
