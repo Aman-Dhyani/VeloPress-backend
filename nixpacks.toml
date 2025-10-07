@@ -1,6 +1,7 @@
 [phases.setup]
 aptPkgs = [
-  "chromium"
+  "chromium",
+  "chromium-browser",
 ]
 
 [env]
