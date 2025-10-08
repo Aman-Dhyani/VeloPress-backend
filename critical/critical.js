@@ -1,13 +1,14 @@
 // generateCriticalCss.js
 import { generate } from 'critical';
 import puppeteer from 'puppeteer';
+import chromium from "@sparticuz/chromium";
 
 export async function generateCriticalCss(urls) {
   try {
     const results = [];
     const browser = await puppeteer.launch({
       headless: true,
-      executablePath: process.env.PUPPETEER_EXECUTABLE_PATH,
+      executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || await chromium.executablePath,
       args: ["--no-sandbox", "--disable-gpu", "--disable-dev-shm-usage"],
     });
 
