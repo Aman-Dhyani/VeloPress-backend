@@ -2,6 +2,7 @@
 import { generate } from 'critical';
 import puppeteer from 'puppeteer';
 import chromium from "@sparticuz/chromium";
+import 'dotenv/config';
 
 export async function generateCriticalCss(urls) {
   try {
